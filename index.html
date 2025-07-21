@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hiruy Zerihun | Design Portfolio</title>
+</head>
+  
+<body class="theme-transition">
+    <!-- ===== Theme Toggle & CV Button ===== -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round">
+                <span class="moon">🌙</span>
+                <span class="sun">☀️</span>
+                <div class="stars"></div>
+                <div class="clouds"></div>
+            </div>
+        </label>
+        <a href="https://drive.google.com/file/d/1lYE-fJ5Qz_XDzpQQDgmmnv3cYQCanrXU/view?usp=sharing" 
+           class="cv-download-btn" download>
+           <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
+
+    <!-- ===== Floating Social Icons ===== -->
+    <div class="social-icons">
+        <a href="https://www.behance.net/hiruyzerihun" target="_blank" class="behance"><i class="fab fa-behance"></i></a>
+        <a href="https://www.linkedin.com/in/hiruy-zerihun250997/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://t.me/Hirazed" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="mailto:Hirazed97@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- ===== Header/Navbar ===== -->
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <a name="home"></a>
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <img id="logo" src="./images/HZ logo.png" data-dark-src="./images/HZ logo.png" data-light-src="./images/Blacklogo.png" style="height: 50px; width: auto;"/> <br />
+            <nav id="navbar" class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white nav-link" href="#home">Home</a>
+                <a class="mr-5 hover:text-white nav-link" href="#work">Work</a>
+                <a class="mr-5 hover:text-white nav-link" href="#websites">Websites</a>
+                <a class="mr-5 hover:text-white nav-link" href="https://www.behance.net/hiruyzerihun" target="_blank">Behance</a>
+                <a class="mr-5 hover:text-white nav-link" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== Hero Section with Typing Animation ===== -->
+    <section class="text-gray-400 bg-gray-900 body-font fade-in">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 id="typed-text" class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+                    <br class="hidden lg:inline-block" />
+                    <span id="typewriter"></span><span class="wave">👋</span>
+                </h1>
+                <p id="aboutme1" class="mb-8 leading-relaxed">
+                    I'm a Mechanical Engineering student with a strong passion for graphic design and the creative arts. Beyond my academic journey, I enjoy exploring visual storytelling and turning ideas into impactful designs.
+                </p>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img id="aboutimage" class="object-cover object-center rounded portfolio-image" alt="me" src="/images/hiruy.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills Section with Animated Bars ===== -->
+    <section class="text-gray-400 bg-gray-900 body-font fade-in" id="skills">
+        <div class="container px-5 py-24 mx-auto">
+            <h1 class="text-3xl font-medium title-font text-white mb-6 text-center">
+                My Skills
+            </h1>
+            <div class="w-full md:w-2/3 mx-auto">
+                <div class="mb-4">
+                    <p class="text-white mb-2">Graphic Design</p>
+                    <div class="w-full bg-gray-800 rounded-full h-4">
+                        <div class="bg-indigo-500 h-4 rounded-full skill-bar" data-skill="98"></div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <p class="text-white mb-2">Adobe Photoshop</p>
+                    <div class="w-full bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full skill-bar" data-skill="96"></div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <p class="text-white mb-2">Adobe Illustrator</p>
+                    <div class="w-full bg-gray-800 rounded-full h-4">
+                        <div class="bg-yellow-500 h-4 rounded-full skill-bar" data-skill="70"></div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <p class="text-white mb-2">Web Design</p>
+                    <div class="w-full bg-gray-800 rounded-full h-4">
+                        <div class="bg-purple-500 h-4 rounded-full skill-bar" data-skill="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Gradient Quote Section ===== -->
+    <section class="quote fade-in">
+        <div class="quote-gradient">
+            <div class="quote-content">
+                <p>"Creativity is allowing yourself to make mistakes. Design is knowing which ones to keep."</p>
+                <div class="quote-author">~ Scott Adams</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Graphic Design Work ===== -->
+<section id="worksec" class="text-gray-400 bg-gray-900 body-font fade-in">
+    <a name="work"></a>
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                <h1 id="heads" class="sm:w-2/5 text-white dark:text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
+                    Work
+                </h1>
+                <div class="sm:w-3/5 flex flex-wrap items-center justify-end space-x-2">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-indigo-500 dark:bg-indigo-600 text-white" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 text-gray-100 dark:text-gray-800" data-filter="posters">Posters</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 text-gray-100 dark:text-gray-800" data-filter="branding">Branding</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 text-gray-100 dark:text-gray-800" data-filter="photo">Photo Manipulation</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 text-gray-100 dark:text-gray-800" data-filter="social">Social Media</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-0 justify-items-center">
+            <!-- Car Posters -->
+            <div class="portfolio-item w-full max-w-md" data-category="posters">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230500381/Designing-the-Drive-A-Portfolio-of-Car-Design-Posters" target="_blank">
+                        <img alt="Car Posters" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/BMW poster 2.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Designing the Drive</h3>
+                            <p class="text-gray-300 text-center">A Portfolio of Car Design Posters</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">Car Posters</h2>
+                <p class="text-base leading-relaxed mt-1">Designing the Drive: A Portfolio of Car Design Posters</p>
+            </div>
+            
+            <!-- Alta Consulting -->
+            <div class="portfolio-item w-full max-w-md" data-category="posters social">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230500915/Quote-Poster-Designs-for-Alta-Consulting-Internship" target="_blank">
+                        <img alt="Alta Consulting" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/quote 7.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Alta Consulting</h3>
+                            <p class="text-gray-300 text-center">Quote & Poster Designs for Internship</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">Alta Consulting Internship</h2>
+                <p class="text-base leading-relaxed mt-1">Quote & Poster Designed for Alta Consulting Internship</p>
+            </div>
+            
+            <!-- Cosmos Coffee -->
+            <div class="portfolio-item w-full max-w-md" data-category="branding">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230501909/Cosmos-Coffee-Branding-Logo-Product-Mockups" target="_blank">
+                        <img alt="Cosmos Coffee" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/CC 5.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Cosmos Coffee</h3>
+                            <p class="text-gray-300 text-center">Branding: Logo & Product Mockups</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">Cosmos Coffee Branding</h2>
+                <p class="text-base leading-relaxed mt-1">Cosmos Coffee Branding: Logo & Product Mockups</p>
+            </div>
+            
+            <!-- Design Journey -->
+            <div class="portfolio-item w-full max-w-md" data-category="photo">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230502503/Design-Journey-Projects-from-My-Learning-Phase" target="_blank">
+                        <img alt="Design Journey" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/1 lada manipulation.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Design Journey</h3>
+                            <p class="text-gray-300 text-center">Projects from My Learning Phase</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">My Design Journey</h2>
+                <p class="text-base leading-relaxed mt-1">Some of my earliest Projects, from My Learning Phase</p>
+            </div>
+            
+            <!-- GDG AAU -->
+            <div class="portfolio-item w-full max-w-md" data-category="social">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230563768/Visual-Stories-for-Tech-GDG-AAU-Design-Highlights" target="_blank">
+                        <img alt="GDG AAU" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/1080x 1080 ops poster.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">GDG AAU</h3>
+                            <p class="text-gray-300 text-center">Visual Stories for Tech Community</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">GDG AAU Graphic Designer</h2>
+                <p class="text-base leading-relaxed mt-1">Visual Storytelling for Tech Communities: GDG AAU Highlights</p>
+            </div>
+            
+            <!-- CTBE Hackathon -->
+            <div class="portfolio-item w-full max-w-md" data-category="posters social">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230565195/CTBE-Hackathon-2025-Event-Design-Highlights" target="_blank">
+                        <img alt="CTBE Hackathon" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/AAiT Hackathon poster.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">CTBE Hackathon</h3>
+                            <p class="text-gray-300 text-center">Event Design Highlights</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">CTBE Innovation Week Hackathon Posters</h2>
+                <p class="text-base leading-relaxed mt-1">CTBE Hackathon 2025: Event Design Highlights</p>
+            </div>
+            
+            <!-- Photo Manipulation -->
+            <div class="portfolio-item w-full max-w-md" data-category="photo">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230753967/Transformations-in-Design-Photo-Manipulation-Work" target="_blank">
+                        <img alt="Photo Manipulation" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/Anbesa bus collage.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Transformations</h3>
+                            <p class="text-gray-300 text-center">Photo Manipulation Work</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">Photo Manipulation Projects</h2>
+                <p class="text-base leading-relaxed mt-1">Transformations in Design: Photo Manipulation Work</p>
+            </div>
+            
+            <!-- YouTube Thumbnails -->
+            <div class="portfolio-item w-full max-w-md" data-category="social">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230566659/Engaging-Visuals-YouTube-Thumbnail-Designs" target="_blank">
+                        <img alt="YouTube Thumbnails" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/AMP wipeout thumbnail.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">YouTube Thumbnails</h3>
+                            <p class="text-gray-300 text-center">Engaging Visual Designs</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">YouTube Thumbnails</h2>
+                <p class="text-base leading-relaxed mt-1">Engaging Visuals: YouTube Thumbnail Designs</p>
+            </div>
+            
+            <!-- Book Cover -->
+            <div class="portfolio-item w-full max-w-md" data-category="branding">
+                <div class="portfolio-card rounded-lg overflow-hidden relative group">
+                    <a href="https://www.behance.net/gallery/230562854/Cover-Design-Showcase-Books-Magazines" target="_blank">
+                        <img alt="Book Cover" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="/images/book cover.png"/>
+                        <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+                            <h3 class="text-white text-xl font-bold mb-2">Book Cover</h3>
+                            <p class="text-gray-300 text-center">Design Showcase</p>
+                            <div class="mt-4 px-4 py-2 bg-indigo-500 rounded-full text-white">View Project</div>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-3">Book Cover</h2>
+                <p class="text-base leading-relaxed mt-1">A simple Book cover design</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for filtering -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Show/hide items based on filter
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Initialize with 'All' filter
+    document.querySelector('.filter-btn[data-filter="all"]').click();
+});
+</script>
+
+   <!-- ===== My Websites Section ===== -->
+<section id="websites" class="text-gray-400 bg-gray-900 body-font fade-in">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-3xl font-medium title-font text-white mb-4">My Websites</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed">Interactive projects I've designed and developed</p>
+        </div>
+        
+        <div class="flex flex-wrap -m-4 justify-center">
+            <!-- Website 1 -->
+            <div class="p-4 md:w-1/3 lg:w-1/3 website-card">
+                <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-lg">
+                    <div class="device-mockup">
+                        <div class="screen">
+                            <img class="w-full h-48 object-cover" src="./images/web1.png" alt="Portfolio Website">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-medium title-font text-white mb-3">Early Portfolio</h2>
+                        <p class="leading-relaxed mb-3">My first portfolio website showcasing early design works and projects</p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="https://hirazed.weebly.com/" target="_blank" class="text-white bg-indigo-500 px-4 py-2 rounded hover:bg-indigo-600">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Website 2 -->
+            <div class="p-4 md:w-1/3 lg:w-1/3 website-card">
+                <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-lg">
+                    <div class="device-mockup">
+                        <div class="screen">
+                            <img class="w-full h-48 object-cover" src="./images/web2.png" alt="Travel Website">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-medium title-font text-white mb-3">Hirazed Travels</h2>
+                        <p class="leading-relaxed mb-3">Tour agency website featuring Addis Ababa tours with booking functionality</p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="https://hirazed973.wordpress.com/" target="_blank" class="text-white bg-indigo-500 px-4 py-2 rounded hover:bg-indigo-600">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Website 3 -->
+            <div class="p-4 md:w-1/3 lg:w-1/3 website-card">
+                <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-lg">
+                    <div class="device-mockup">
+                        <div class="screen">
+                            <img class="w-full h-48 object-cover" src="./images/web3.png" alt="Clothing Website">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-medium title-font text-white mb-3">Hira Habesha Clothing</h2>
+                        <p class="leading-relaxed mb-3">E-commerce platform for Ethiopian traditional clothing with product showcase</p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="https://hiruyz.nehabi.com/" target="_blank" class="text-white bg-indigo-500 px-4 py-2 rounded hover:bg-indigo-600">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="text-gray-400 bg-gray-900 body-font relative fade-in">
+        <form action="https://formsubmit.co/Hirazed97@gmail.com" method="POST">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thanks for reaching out to me. You will hear from me,very soon!. Have a good day 😃">
+            <a name="contact"></a>
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+                        Contact Me
+                    </h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                        Feel free to contact me if you have any questions or want some work to be done.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                    <div class="flex flex-wrap -m-2">
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            </div>
+                        </div>
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            </div>
+                        </div>
+                        <div class="p-2 w-full">
+                            <div class="relative">
+                                <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+                                <textarea id="message" name="message" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                            </div>
+                        </div>
+                        <div class="p-2 w-full">
+                            <button id="send-btn" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- ===== Back to Top Button ===== -->
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== Loading Animation ===== -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        // Loading Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show content immediately
+            document.body.style.opacity = 1;
+            
+            // Hide loader after 500ms minimum
+            setTimeout(() => {
+                document.querySelector('.loader-wrapper').style.display = 'none';
+            }, 500);
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animated Skill Bars
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const value = bar.getAttribute('data-skill');
+                bar.style.width = value + '%';
+            });
+        }
+
+        // Scroll Animation Trigger
+        function checkScroll() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+
+            // Animate skills when in view
+            const skillsSection = document.getElementById('skills');
+            const skillsRect = skillsSection.getBoundingClientRect();
+            if (skillsRect.top < window.innerHeight && skillsRect.bottom > 0) {
+                animateSkills();
+            }
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        // Back to Top Functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Typing Animation
+        const text = "Hello, I'm Hiruy!";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById('typewriter').textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+
+        // Glowing Button Effects
+        const glowingButtons = ['#send-btn'];
+        glowingButtons.forEach(btnId => {
+            const btn = document.querySelector(btnId);
+            if (btn) {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.boxShadow = '0 0 15px rgba(79, 70, 229, 0.7)';
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.boxShadow = 'none';
+                });
+            }
+        });
+
+        // Portfolio Image Hover Effects
+        document.querySelectorAll('.portfolio-image').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.03)';
+                img.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                img.style.boxShadow = '0 0 20px rgba(79, 70, 229, 0.5)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+                img.style.boxShadow = 'none';
+            });
+        });
+
+        // Enhanced Theme Toggle
+        const themeCheckbox = document.getElementById('theme-checkbox');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const logo = document.getElementById('logo');
+
+        // Initialize theme
+        const currentTheme = localStorage.getItem('theme') || 
+                          (prefersDarkScheme.matches ? 'dark' : 'light');
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeCheckbox.checked = true;
+            if (logo.hasAttribute('data-light-src')) {
+                logo.src = logo.getAttribute('data-light-src');
+            }
+        }
+
+        // Toggle theme with animation
+        themeCheckbox.addEventListener('change', () => {
+            if (themeCheckbox.checked) {
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+                if (logo.hasAttribute('data-light-src')) {
+                    logo.src = logo.getAttribute('data-light-src');
+                }
+            } else {
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+                if (logo.hasAttribute('data-dark-src')) {
+                    logo.src = logo.getAttribute('data-dark-src');
+                }
+            }
+        });
+
+        // Website Card Hover Effects
+        document.querySelectorAll('.website-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const x = e.clientX - card.getBoundingClientRect().left;
+                const y = e.clientY - card.getBoundingClientRect().top;
+                
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${(y - card.offsetHeight/2) / 40}deg)
+                    rotateY(${(x - card.offsetWidth/2) / -40}deg)
+                `;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+    </script>
+
+<!-- ===== Graphic Design Work Section (keep your existing HTML) ===== -->
+<!-- ... your entire work section HTML remains unchanged ... -->
+
+<!-- ===== JavaScript at the bottom ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Show/hide items based on filter
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Initialize with 'All' filter
+    document.querySelector('.filter-btn[data-filter="all"]').click();
+});
+</script>
+<script>
+// Smooth scrolling for anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle all links that start with #
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Get the target element
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      // Only proceed if target exists
+      if (targetElement) {
+        e.preventDefault();
+        
+        // Calculate the target position (accounting for fixed header height)
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        // Smooth scroll to target
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Update URL without jumping (for deep linking)
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
+        } else {
+          window.location.hash = targetId;
+        }
+      }
+    });
+  });
+  
+  // Check URL hash on page load
+  if (window.location.hash) {
+    const targetElement = document.querySelector(window.location.hash);
+    if (targetElement) {
+      setTimeout(() => {
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
+});
+</script>
+</body>
+</html>

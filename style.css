@@ -1,0 +1,703 @@
+/* ===== Base Styles ===== */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.2s ease;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+/* ===== Dotted Background ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, 
+            rgba(255, 255, 255, 0.1) 1px, 
+            transparent 1px) 0 0 / 25px 25px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+body.light-mode::before {
+    background: 
+        radial-gradient(circle at 10% 20%, 
+            rgba(0, 0, 0, 0.08) 1px, 
+            transparent 1px) 0 0 / 25px 25px;
+}
+
+/* ===== Loading Animation ===== */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+
+/* ===== Logo ===== */
+#logo {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    transition: all 0.3s ease;
+}
+
+/* ===== Waving Hand ===== */
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg) }
+    10% { transform: rotate(14deg) }
+    20% { transform: rotate(-8deg) }
+    30% { transform: rotate(14deg) }
+    40% { transform: rotate(-4deg) }
+    50% { transform: rotate(10deg) }
+    60% { transform: rotate(0deg) }
+    100% { transform: rotate(0deg) }
+}
+
+/* ===== Navbar ===== */
+#navbar {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/* ===== About Section ===== */
+#aboutme0 {
+    font-size: 35px;
+}
+
+#aboutme1 {
+    font-size: 20px;
+    color: white;
+}
+
+#aboutimage {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 0 10px rgba(76, 75, 75, 0.492);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aboutimage:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+}
+
+/* ===== Gradient Quote Section ===== */
+.quote {
+    padding: 80px 20px;
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-gradient {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a78bfa 100%);
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+}
+
+.quote-content p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-style: italic;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .quote-content p { 
+        font-size: 1.4rem; 
+        line-height: 1.3;
+    }
+    .quote-author { 
+        font-size: 1rem; 
+    }
+    .quote {
+        padding: 60px 15px;
+    }
+    .quote-gradient {
+        padding: 30px 15px;
+    }
+}
+
+/* ===== Work Section ===== */
+#worksec {
+    color: white;
+}
+
+#heads {
+    font-size: 40px;
+}
+
+/* ===== Websites Section ===== */
+.website-card {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+}
+
+.device-mockup {
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #1a1a1a;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.device-mockup .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+.website-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== Back to Top Button ===== */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #4f46e5;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #3730a3;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+}
+
+/* ===== Theme Switch ===== */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    background: rgba(26, 32, 44, 0.8);
+    padding: 8px 12px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, #4f46e5, #3730a3);
+    transition: .4s;
+    border-radius: 34px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input:checked + .slider {
+    background: linear-gradient(145deg, #f59e0b, #fbbf24);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* Icons */
+.moon, .sun {
+    position: absolute;
+    font-size: 14px;
+    transition: .4s;
+}
+
+.moon {
+    top: 6px;
+    right: 8px;
+    opacity: 1;
+}
+
+.sun {
+    top: 6px;
+    left: 8px;
+    opacity: 0;
+}
+
+input:checked + .slider .moon {
+    opacity: 0;
+}
+
+input:checked + .slider .sun {
+    opacity: 1;
+}
+
+/* Decorations */
+.stars, .clouds {
+    position: absolute;
+    transition: .4s;
+}
+
+.stars {
+    top: 3px;
+    left: 10px;
+    font-size: 6px;
+    opacity: 1;
+}
+
+.clouds {
+    top: 3px;
+    right: 10px;
+    font-size: 8px;
+    opacity: 0;
+}
+
+input:checked + .slider .stars {
+    opacity: 0;
+}
+
+input:checked + .slider .clouds {
+    opacity: 1;
+}
+
+/* ===== CV Download Button ===== */
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv-download-btn:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv-download-btn i {
+    margin-right: 8px;
+}
+.portfolio-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+/* ===== Floating Social Icons ===== */
+.social-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.social-icons a.behance {
+    background: linear-gradient(135deg, #053eff 0%, #0066ff 100%);
+}
+
+.social-icons a.linkedin {
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.social-icons a.telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #00aced 100%);
+}
+
+.social-icons a.email {
+    background: linear-gradient(135deg, #d44638 0%, #ea4335 100%);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1) translateX(5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.website-card:hover .device-mockup {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+/* ===== Fade-in Animation ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Skill Bars Animation ===== */
+.skill-bar {
+    width: 0;
+    transition: width 1.5s ease-out;
+}
+
+/* ===== Portfolio Image Hover ===== */
+.portfolio-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Typing Animation ===== */
+#typewriter {
+    border-right: 2px solid #4f46e5;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4f46e5; }
+}
+
+/* ===== Light Mode Styles ===== */
+body.light-mode {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+body.light-mode .text-gray-400 {
+    color: #6b7280;
+}
+
+body.light-mode .bg-gray-900 {
+    background-color: #f9fafb;
+}
+
+body.light-mode .bg-gray-800 {
+    background-color: #e5e7eb;
+}
+
+body.light-mode .text-white {
+    color: #111827;
+}
+
+body.light-mode #aboutme1 {
+    color: #374151;
+}
+
+body.light-mode .quote-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+}
+
+body.light-mode .quote-content p {
+    color: #ffffff;
+}
+
+body.light-mode header a {
+    color: #4b5563 !important;
+}
+
+body.light-mode header a:hover {
+    color: #111827 !important;
+}
+
+body.light-mode .device-mockup {
+    background: #e5e7eb;
+}
+
+body.light-mode .theme-switch-wrapper {
+    background: rgba(249, 250, 251, 0.8);
+}
+body.light-mode .text-base.leading-relaxed {
+    color: #4b5563 !important;
+}
+body.light-mode .portfolio-item h2,
+body.light-mode .portfolio-item p {
+    color: #374151 !important;
+}
+/* Fix for website cards layout */
+#websites .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#websites .website-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    min-width: 280px;
+}
+
+/* Light mode text fix */
+body.light-mode .text-base.leading-relaxed {
+    color: #4b5563 !important;
+}
+
+/* ===== Purple Glow Behind Cards ===== */
+.portfolio-item, .website-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glow effect (hidden by default) */
+.portfolio-item::before, 
+.website-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.25) 0%, 
+    rgba(124, 58, 237, 0.2) 100%);
+  border-radius: 0.75rem;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(8px);
+  transition: all 0.4s ease;
+}
+
+/* Show glow on hover */
+.portfolio-item:hover::before,
+.website-card:hover::before {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Card movement */
+.portfolio-card,
+.website-card > div {
+  transition: transform 0.3s ease;
+  background: rgba(26, 32, 44, 0.9);
+}
+
+.portfolio-item:hover .portfolio-card,
+.website-card:hover > div {
+  transform: translateY(-5px);
+}
+
+/* Light mode adjustments */
+body.light-mode .portfolio-item::before,
+body.light-mode .website-card::before {
+  background: linear-gradient(135deg, 
+    rgba(199, 210, 254, 0.35) 0%, 
+    rgba(165, 180, 252, 0.3) 100%);
+}
+
+body.light-mode .portfolio-card,
+body.light-mode .website-card > div {
+  background: rgba(249, 250, 251, 0.95);
+}
+/* Light Mode Color Adjustments */
+body.light-mode {
+  --bg-color: #f8fafc;  /* Softer white */
+  --card-bg: #ffffff;   /* Pure white */
+  --text-color: #334155; /* Soft gray-blue */
+  --filter-inactive: #e2e8f0; /* Very light gray */
+  --filter-hover: #cbd5e1; /* Light gray */
+}
+
+/* Apply light mode colors */
+body.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Filter buttons in light mode */
+body.light-mode .filter-btn:not(.active) {
+  background-color: var(--filter-inactive) !important;
+  color: var(--text-color) !important;
+}
+
+body.light-mode .filter-btn:not(.active):hover {
+  background-color: var(--filter-hover) !important;
+}
+
+body.light-mode .filter-btn.active {
+  background-color: #6366f1 !important; /* Slightly softer indigo */
+  color: white !important;
+}
+
+/* Card backgrounds in light mode */
+body.light-mode .portfolio-card,
+body.light-mode .website-card > div {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Text colors in light mode */
+body.light-mode .text-white {
+  color: var(--text-color) !important;
+}
+
+body.light-mode .text-gray-400 {
+  color: #64748b !important; /* Softer gray */
+}
+/* Filter button transitions */
+.filter-btn {
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+/* Active filter button */
+.filter-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+}
+
+/* Light mode adjustments */
+body.light-mode {
+    --filter-inactive-bg: #e2e8f0;
+    --filter-inactive-text: #334155;
+    --filter-hover-bg: #cbd5e1;
+}
+
+body.light-mode .filter-btn:not(.active) {
+    background-color: var(--filter-inactive-bg) !important;
+    color: var(--filter-inactive-text) !important;
+}
+
+body.light-mode .filter-btn:not(.active):hover {
+    background-color: var(--filter-hover-bg) !important;
+}
+
+/* Ensure work title stays visible in light mode */
+body.light-mode #heads {
+    color: #1e293b !important;
+}
+
+/* Keep filter button styles if desired */
+.filter-btn.active {
+    background-color: #4f46e5;
+    color: white;
+}
